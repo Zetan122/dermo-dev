@@ -1,12 +1,15 @@
 from SimpleQIWI import *
 
-token = input("ВАШ ТОКЕН")
-phone = input("ВАШ ТЕЛЕФОН")
+token = input("ВАШ ТОКЕН ")
+phone = input("ВАШ ТЕЛЕФОН ")
 
 api = QApi(token=token, phone=phone)
 
 print(api.balance)
 
-api.pay(account="+79197211395", amount=240, comment='+тест ')
+account = input("Киви Получателя: ")
+amount = input("Сумма Перевода: ")
+comment = input("Коментарий К Переводу: ")
+api.pay(account=account, amount=amount, comment=comment)
 
 print(api.balance)
