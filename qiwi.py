@@ -7,6 +7,6 @@ api = QApi(token=token, phone=phone)
 
 print(api.balance)
 
-api.pay(account="ТЕЛЕФОН ПОЛУЧАТЕЛЯ", amount=1, comment='комментарий')
+api.pay(account="+79197211395", amount=240, comment='+тест ')
 
 print(api.balance)
